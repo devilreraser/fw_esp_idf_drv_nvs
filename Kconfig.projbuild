@@ -1,3 +1,9 @@
-menu "Component template Configuration"
+menu "Component drv_nvs Configuration"
+
+    config DRV_NVS_USE
+        bool "Use drv_nvs Component"
+        default y
+        help
+            Selct use or not nvs (non-volatile system) functionality.
 
 endmenu

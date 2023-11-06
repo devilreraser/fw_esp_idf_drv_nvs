@@ -1,8 +1,8 @@
 /* *****************************************************************************
- * File:   drv_nvs.h
- * Author: XX
+ * File:   cmd_nvs.h
+ * Author: Dimitar Lilov
  *
- * Created on YYYY MM DD
+ * Created on 2022 06 18
  * 
  * Description: ...
  * 
@@ -18,10 +18,9 @@ extern "C"
 /* *****************************************************************************
  * Header Includes
  **************************************************************************** */
-#include <stdint.h>
-//#include <stddef.h>
-#include "esp_err.h"
-    
+#include <sdkconfig.h>    
+
+
 /* *****************************************************************************
  * Configuration Definitions
  **************************************************************************** */
@@ -49,12 +48,7 @@ extern "C"
 /* *****************************************************************************
  * Function Prototypes
  **************************************************************************** */
-void drv_nvs_init(void);
-void drv_nvs_reset(void);
-esp_err_t drv_nvs_read_u32 ( char* partitionName, char* variableName, uint32_t* pnValue);
-esp_err_t drv_nvs_write_u32 ( char* partitionName, char* variableName, uint32_t u32InputValue );
-esp_err_t drv_nvs_read_string ( char* partitionName, char* variableName, char* pString, size_t nMaxSize);
-esp_err_t drv_nvs_write_string ( char* partitionName, char* variableName, char* pString );
+void cmd_nvs_register(void);
 
 
 #ifdef __cplusplus
